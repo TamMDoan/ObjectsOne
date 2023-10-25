@@ -17,7 +17,7 @@ public class Main {
 
         Chair chair1 = new Chair("Wood", "Brown", 4, 80);
         Dog dog1 = new Dog("Dasi", 8, "Chihuahua");
-        Dog dog2 = new Dog("Imaginary dog", 5, "Weiner");
+        Dog dog2 = new Dog("Imaginary dog", 5, "Weiner dog");
         Car car1 = new Car("Honda", "Accord", 2013, 96000, 12);
 
         Person[] people = new Person[5];
@@ -42,7 +42,13 @@ public class Main {
             }
         }
 
-        System.out.println("I also have a chair that's made of " + chair1.getMaterial().toLowerCase() + " and the color " + chair1.getColor().toLowerCase() +".");
+        // testing enhanced for after seeing intellij's suggestion
+        System.out.println("******************************");
+        for(Dog dog : dogs){
+            System.out.println("Woof woof. My name is " + dog.getName() + ". I am a " + dog.getBreed());
+        }
+
+        System.out.println("I also have a chair that's made of " + chair1.getMaterial().toLowerCase() + " and the color is " + chair1.getColor().toLowerCase() +".");
 
     }
 }
