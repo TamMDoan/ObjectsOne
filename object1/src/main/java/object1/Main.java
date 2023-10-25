@@ -42,5 +42,7 @@ public class Main {
             }
         }
 
+        System.out.println("I also have a chair that's made of " + chair1.getMaterial().toLowerCase() + " and the color " + chair1.getColor().toLowerCase() +".");
+
     }
 }
