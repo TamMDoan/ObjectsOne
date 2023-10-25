@@ -32,23 +32,19 @@ public class Main {
         dogs[0] = dog1;
         dogs[1] = dog2;
 
-        for(int i = 0; i < people.length; i++){
-            System.out.println("Hello, my name is " + people[i].name + ". I'm " + people[i].age + " years old.");
-            if(people[i].name.equals("Tam")){
-                System.out.println("I own a " + car1.getMake() + " " + car1.getModel() + "! I also have a dog named " + dogs[0].getName() + "!");
-            }
-            else{
-                System.out.println("I own a dog named " + dogs[1].getName() + ".");
+        for(Person person : people){
+            System.out.println("Hello, my name is " + person.name + ". I'm " + person.age + " years old.");
+            if(person.name.equals("Tam")){
+                System.out.println("I own a " + car1.getMake() + " " + car1.getModel() + "!");
+                System.out.println("I also have a chair that's made of " + chair1.getMaterial().toLowerCase() + " and the color is " + chair1.getColor().toLowerCase() +".");
+
             }
         }
 
         // testing enhanced for after seeing intellij's suggestion
         System.out.println("******************************");
         for(Dog dog : dogs){
-            System.out.println("Woof woof. My name is " + dog.getName() + ". I am a " + dog.getBreed());
+            System.out.println("Woof woof. My name is " + dog.getName() + ". I am a " + dog.getBreed().toLowerCase());
         }
-
-        System.out.println("I also have a chair that's made of " + chair1.getMaterial().toLowerCase() + " and the color is " + chair1.getColor().toLowerCase() +".");
-
     }
 }
